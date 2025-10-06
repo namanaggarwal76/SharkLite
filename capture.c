@@ -1,4 +1,5 @@
 #include "capture.h"
+#include "parser.h"
 #include "colors.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,11 +16,14 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header,
     (void)args; // Suppress unused parameter warning
     packet_counter++;
     
+    // Parse packet
+    packet_info_t info;
+    parse_packet(packet, header->caplen, &info);
+    
         
         
-        
-        printf("Packet captured! length: %d
-", header->len);
+        printf("Packet %d: %s -> %s (%s)
+", packet_counter, info.src_ip, info.dst_ip, info.app_protocol);
 }
 
 // External global handle for signal handling
