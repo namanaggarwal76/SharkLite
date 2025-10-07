@@ -1,5 +1,6 @@
 #include "capture.h"
 #include "parser.h"
+#include "storage.h"
 #include "colors.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,8 +22,10 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header,
     parse_packet(packet, header->caplen, &info);
     
         
-        
-        printf("Packet %d: %s -> %s (%s)
+    // Store packet in session
+    store_packet(packet_counter, header->ts, packet, header->len, header->caplen);
+    
+        printf("Packet %d: %s -> %s (%s) - Stored
 ", packet_counter, info.src_ip, info.dst_ip, info.app_protocol);
 }
 
@@ -39,7 +42,9 @@ void start_capture(const char *device, int dummy) {
     packet_counter = 0;
     stop_capture = 0;
     
-        
+    // Initialize new session
+    init_session();
+    
     // Get network number and mask
     if (pcap_lookupnet(device, &net, &mask, errbuf) == -1) {
         fprintf(stderr, COLOR_WARNING "Warning: Couldn't get netmask for device %s: %s" COLOR_RESET "\n", device, errbuf);
