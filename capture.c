@@ -1,5 +1,6 @@
 #include "capture.h"
 #include "parser.h"
+#include "display.h"
 #include "storage.h"
 #include "colors.h"
 #include <stdio.h>
@@ -29,8 +30,8 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header,
     // Store packet in session
     store_packet(packet_counter, header->ts, packet, header->len, header->caplen);
     
-        printf("Packet %d: %s -> %s (%s) - Filtered & Stored
-", packet_counter, info.src_ip, info.dst_ip, info.app_protocol);
+    // Display packet summary
+    display_packet_summary(packet_counter, header->ts, header->len, &info);
 }
 
 // External global handle for signal handling
