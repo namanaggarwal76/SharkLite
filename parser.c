@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #include "parser.h"
 #include <string.h>
 #include <arpa/inet.h>
@@ -185,4 +184,3 @@ void parse_packet(const uint8_t *packet, uint32_t length, packet_info_t *info) {
         inet_ntop(AF_INET, &tpa, info->arp_tpa, INET_ADDRSTRLEN);
     }
 }
-/* LLM code ends here */

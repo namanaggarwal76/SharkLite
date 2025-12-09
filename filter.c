@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #include "filter.h"
 #include "colors.h"
 #include <stdio.h>
@@ -84,4 +83,3 @@ const char* get_bpf_filter_string(filter_type_t filter) {
             return "";
     }
 }
-/* LLM code ends here */

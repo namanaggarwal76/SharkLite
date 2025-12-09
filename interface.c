@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #include "interface.h"
 #include "colors.h"
 #include <stdio.h>
@@ -68,4 +67,3 @@ void discover_interfaces(char *selected_device, int *device_index) {
     
     pcap_freealldevs(alldevs);
 }
-/* LLM code ends here */

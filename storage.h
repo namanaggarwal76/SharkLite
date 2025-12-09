@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #ifndef STORAGE_H
 #define STORAGE_H
 
@@ -15,4 +14,3 @@ void store_packet(uint32_t id, struct timeval timestamp,
 void free_session();
 
 #endif // STORAGE_H
-/* LLM code ends here */

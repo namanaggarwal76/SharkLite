@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #include "display.h"
 #include "colors.h"
 #include <stdio.h>
@@ -324,4 +323,3 @@ void display_session_summary(const packet_session_t *session) {
     
     printf("\n" COLOR_LABEL "Enter packet ID to inspect (or 0 to return): " COLOR_RESET);
 }
-/* LLM code ends here */

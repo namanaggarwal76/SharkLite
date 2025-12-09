@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #include "capture.h"
 #include "parser.h"
 #include "display.h"
@@ -101,4 +100,3 @@ void start_capture(const char *device, filter_type_t filter) {
     
     printf("\n\n" COLOR_HEADER "[C-Shark]" COLOR_RESET " Capture stopped. Captured " COLOR_SUCCESS "%u packets" COLOR_RESET ".\n", packet_counter);
 }
-/* LLM code ends here */

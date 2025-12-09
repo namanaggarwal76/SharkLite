@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #ifndef COLORS_H
 #define COLORS_H
 
@@ -46,4 +45,3 @@
 #define COLOR_ASCII         COLOR_BRIGHT_GREEN
 
 #endif // COLORS_H
-/* LLM code ends here */

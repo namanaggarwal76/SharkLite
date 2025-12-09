@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
@@ -8,4 +7,3 @@
 void discover_interfaces(char *selected_device, int *device_index);
 
 #endif // INTERFACE_H
-/* LLM code ends here */

@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #include "storage.h"
 #include <stdlib.h>
 #include <string.h>
@@ -45,4 +44,3 @@ void free_session() {
     current_session.count = 0;
     current_session.active = 0;
 }
-/* LLM code ends here */

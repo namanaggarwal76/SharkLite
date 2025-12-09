@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
@@ -16,4 +15,3 @@ void display_full_hex_dump(const uint8_t *data, uint32_t length);
 void display_session_summary(const packet_session_t *session);
 
 #endif // DISPLAY_H
-/* LLM code ends here */

@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #ifndef PARSER_H
 #define PARSER_H
 
@@ -83,4 +82,3 @@ typedef struct {
 void parse_packet(const uint8_t *packet, uint32_t length, packet_info_t *info);
 
 #endif // PARSER_H
-/* LLM code ends here */

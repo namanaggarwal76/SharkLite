@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #ifndef CSHARK_H
 #define CSHARK_H
 
@@ -31,4 +30,3 @@ extern packet_session_t current_session;
 extern volatile int stop_capture;
 
 #endif // CSHARK_H
-/* LLM code ends here */

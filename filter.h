@@ -1,4 +1,3 @@
-/* LLM code starts here */
 #ifndef FILTER_H
 #define FILTER_H
 
@@ -25,4 +24,3 @@ int packet_matches_filter(const packet_info_t *info, filter_type_t filter);
 const char* get_bpf_filter_string(filter_type_t filter);
 
 #endif // FILTER_H
-/* LLM code ends here */
